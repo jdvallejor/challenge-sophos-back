@@ -1,0 +1,41 @@
+{
+  "name": "challenge-sophos-back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.11",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@babel/node": "^7.14.2",
+    "@babel/plugin-transform-runtime": "^7.14.3",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.14.2",
+    "@babel/runtime": "^7.14.0"
+  },
+  "scripts": {
+    "start": "npm run build && node ./build/server.js",
+    "start:dev": "nodemon --exec babel-node ./server.js",
+    "build": "npm run clean && npm run build-babel",
+    "clean": "rm -rf build && mkdir build",
+    "build-babel": "babel -d ./build ./server.js -s"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdvallejor/challenge-sophos-back.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jdvallejor/challenge-sophos-back/issues"
+  },
+  "homepage": "https://github.com/jdvallejor/challenge-sophos-back#readme"
+}
